@@ -1,0 +1,179 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+}
+
+#container {
+  width: 100vw;
+  min-height: 100vh;
+  /* overflow: hidden; */
+}
+#wrapper {
+  display: grid;
+}
+
+#logo {
+  padding: 20px;
+}
+
+#logo img {
+  width: 100px;
+}
+
+#image {
+  width: 100%;
+  height: 200px;
+
+  background-image: url(../images/hero-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#heading,
+#message {
+  text-align: center;
+}
+
+#heading {
+  padding-top: 1.6em;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.6rem;
+  line-height: 1.2em;
+}
+
+#heading span:first-child {
+  color: hsl(0, 36%, 70%);
+  font-weight: 300;
+}
+
+#heading span:last-child {
+  color: hsl(0, 6%, 24%);
+  font-weight: 600;
+}
+
+#message {
+  padding: 0 40px 20px 40px;
+}
+
+#message p {
+  font-size: 0.8rem;
+  color: hsl(0, 36%, 70%);
+  line-height: 1.6em;
+}
+
+#form-container {
+  width: 100%;
+}
+
+.form-field {
+  position: relative;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.form-field span.btn-arrow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 100%;
+  border-radius: 20px;
+  background-image: url(../images/icon-arrow.svg),
+    linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
+}
+
+@keyframes slide_button {
+  0% {
+    right: 0;
+  }
+  50% {
+    right: 90%;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+.btn-slide {
+  animation-duration: 1s;
+  animation-name: slide_button;
+}
+
+.form-field span.btn-arrow:hover {
+  background-image: url(../images/icon-arrow.svg),
+    linear-gradient(135deg, hsl(0, 74%, 74%), hsl(0, 80%, 86%));
+  cursor: pointer;
+}
+
+.form-field span.icon-error {
+  display: none;
+  background-image: url(../images/icon-error.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  right: 60px;
+  top: 8px;
+  background-color: red;
+}
+
+.form-field span.error-message,
+.form-field span.success-message {
+  position: absolute;
+  bottom: -20px;
+  left: 20px;
+  color: hsl(0, 93%, 68%);
+  font-size: 0.8rem;
+  display: none;
+}
+
+.form-field span.error-message {
+  color: hsl(0, 93%, 68%);
+}
+
+.form-field span.success-message {
+  color: hsl(143, 87%, 38%);
+}
+
+input#email {
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 0.7px solid hsl(0, 36%, 70%);
+}
+
+input#email::placeholder {
+  color: hsl(0, 36%, 70%);
+  opacity: 0.5;
+  font-size: 0.8rem;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0.5;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(0, 6%, 24%);
+}
