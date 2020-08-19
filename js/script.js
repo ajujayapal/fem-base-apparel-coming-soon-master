@@ -14,11 +14,10 @@ divButton.addEventListener("animationend", handleAnimationEnd);
 function handleButtonClick() {
   let email = emailField.value;
   let pattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
+  clear();
   if (!pattern.test(email)) {
     showErrorElements();
   } else {
-    hideErrorElements();
     divButton.classList.add("btn-slide");
     emailField.value = "";
   }
@@ -32,11 +31,13 @@ function handleAnimationEnd() {
 function showErrorElements() {
   divErrorIcon.style.display = "block";
   divErrorField.style.display = "block";
+  emailField.classList.add("red-border");
 }
 
 function hideErrorElements() {
   divErrorIcon.style.display = "none";
   divErrorField.style.display = "none";
+  emailField.classList.remove("red-border");
 }
 
 function clear() {
