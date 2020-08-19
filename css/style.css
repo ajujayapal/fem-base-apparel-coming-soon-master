@@ -191,6 +191,11 @@ footer {
     font-size: 26px;
   }
   #wrapper {
+    background-image: url(../images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom left;
+
     width: 60%;
     float: left;
     padding: 0 15%;
